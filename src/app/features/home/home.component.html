@@ -1,0 +1,27 @@
+<div class="home"
+     fxLayout="column"
+     fxLayoutAlign="start center"
+     fxLayoutGap="25px">
+    <h1>Home</h1>
+
+    <h2>Lista de productos</h2>
+
+    <div class="w-100"
+         fxLayout="column"
+         fxLayoutAlign="start start"
+         fxLayoutGap="15px">
+        <mat-card *ngFor="let product of products"
+                  fxLayout="row"
+                  fxLayoutAlign="start center"
+                  fxLayoutGap="15px"
+                  class="w-100 pointer card"
+                  (click)="goToProduct(product)">
+            <img [src]="product.image"
+                 alt="">
+            <span>{{product.name}}</span>
+            <span>{{product.price}}$</span>
+
+        </mat-card>
+
+    </div>
+</div>

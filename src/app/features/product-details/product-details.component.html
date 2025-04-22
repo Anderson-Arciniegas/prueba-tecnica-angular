@@ -1,0 +1,28 @@
+<div class="home"
+     fxLayout="column"
+     fxLayoutAlign="start start"
+     fxLayoutGap="25px">
+
+    <button mat-button
+            (click)="goBack()">Atras</button>
+
+    <h2>Detalles de producto</h2>
+
+    <div class="w-100"
+         fxLayout="column"
+         fxLayoutAlign="start start"
+         fxLayoutGap="15px">
+        <mat-card fxLayout="column"
+                  fxLayoutAlign="start start"
+                  fxLayoutGap="15px"
+                  class="w-100 pointer card">
+            <img [src]="product.image"
+                 alt="">
+            <span>{{product.name}}</span>
+            <span>{{product.price}}$</span>
+            <p>{{product.description}}</p>
+
+        </mat-card>
+
+    </div>
+</div>
